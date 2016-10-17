@@ -40,5 +40,5 @@ class WcCard extends HTMLElement {
 
 }
 
-// document.registerElement('wc-card', WcCard);
-(<any>window).customElements.define('sg-card', WcCard);
+document.registerElement('wc-card', WcCard);
+// (<any>window).customElements.define('sg-card', WcCard);

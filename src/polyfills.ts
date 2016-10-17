@@ -18,5 +18,5 @@ import 'core-js/es6/reflect';
 import 'core-js/es7/reflect';
 import 'zone.js/dist/zone';
 
-import 'webcomponents.js/webcomponents-lite.js'; // v1 branch
+import 'webcomponents.js';
 import './app/web-components/wc-card/wc-card.ts';
