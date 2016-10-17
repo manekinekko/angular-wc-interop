@@ -21,6 +21,8 @@
         "styles.css"
       ],
       "scripts": [
+        "../node_modules/highcharts/highcharts.js",
+        "../node_modules/highcharts/highstock.js"
       ],
       "environments": {
         "source": "environments/environment.ts",

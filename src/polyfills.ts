@@ -22,3 +22,4 @@ import 'webcomponents.js';
 import './app/web-components/wc-element.ts';
 import './app/web-components/wc-card/wc-card.ts';
 import './app/web-components/wc-button/wc-button.ts';
+import './app/web-components/wc-stock/wc-stock.ts';

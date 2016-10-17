@@ -1,6 +1,7 @@
 wc-card {
   margin: 10px;
   height: 250px;
+  width: 600px;
 }
 
 wc-card.theme-dark {
