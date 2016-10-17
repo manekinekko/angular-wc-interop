@@ -1,44 +1,54 @@
-// import './wc-card.html';
+import { WcElement } from '../wc-element';
+
 const template = require('./wc-card.html');
 
-class WcCard extends HTMLElement {
-
-  shadow;
-
+class WcCard extends WcElement {
+  
   constructor() {
     super();
   }
 
+  static get observedAttributes() {
+    return ['title'];
+  }
+
   createdCallback() {
-    console.log('WcCard::createdCallback');
-    this.render();
+    super.createdCallback();
+    super.render(template);
+    this.tick();
   }
 
   attachedCallback() {
-    console.log('WcCard::attachedCallback');
+    super.attachedCallback();
+    const title = this.getAttribute('title');
   }
 
   detachedCallback() {
-    console.log('WcCard::detachedCallback');
+    super.detachedCallback();
   }
 
-  attributeChangedCallback() {
-    console.log('WcCard::attributeChangedCallback');
+  attributeChangedCallback(attributeName, previousValue, currentValue) {
+    super.attributeChangedCallback(attributeName, previousValue, currentValue);
+
+    if (attributeName === 'title') {
+      let titleRef = this.shadowRoot.querySelector('h1');
+      if (currentValue) {
+        titleRef.innerText = currentValue;
+        titleRef.removeAttribute('hidden');
+      }
+      else {
+        titleRef.innerText = '';
+        titleRef.setAttribute('hidden', 'true');
+      }
+    }
   }
 
-  private render() {
-    debugger;
-    const template = document.querySelector('#template');
-    // const instance = template.content.cloneNode(true);
-
-    // const instance = document.createElement('h1');
-    // instance.innerText = 'Hello from Web Component';
-
-    const shadowRoot = this.createShadowRoot();
-    shadowRoot.innerHTML = template.toString();
+  private tick() {
+    setInterval( () => {
+      super.fire('tick');
+    }, 1000);
   }
 
 }
 
 document.registerElement('wc-card', WcCard);
-// (<any>window).customElements.define('sg-card', WcCard);

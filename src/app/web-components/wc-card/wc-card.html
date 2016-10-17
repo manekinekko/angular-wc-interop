@@ -1,6 +1,39 @@
-<template id="template">
+<!-- load external css -->
+<link rel="stylesheet" href="./wc-card.css">
+
+
+<!-- this is the component template -->
+<!-- !! everything outside doesn't get rendered !! -->
+<template>
+
+  <!-- use internal styling -->
   <style>
-    p { color: orange; }
+    :host {
+      overflow: hidden;
+      color: rgba(0,0,0,0.87);
+      background: white;
+      min-height: 100px;
+      min-width: 400px;
+      display: inline-block;
+      vertical-align: top;
+      box-shadow: 0 5px 6px -3px rgba(0,0,0,.2),0 9px 12px 1px rgba(0,0,0,.14),0 3px 16px 2px rgba(0,0,0,.12);
+    }
+    ::content p {
+      padding: 4px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 1.3em;
+      padding: 12px 12px;
+      color: white;
+      background: #26a69a;
+    }
+
   </style>
-  <p>Hello Web Component</p>
+
+  <h1 id="title" hidden></h1>
+
+  <!-- content projection -->
+  <content></content>
+
 </template>

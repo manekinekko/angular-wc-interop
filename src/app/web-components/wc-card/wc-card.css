@@ -1,3 +1,9 @@
 wc-card {
-  border: 1px solid;
+  margin: 10px;
+  height: 250px;
+}
+
+wc-card.theme-dark {
+  background: #26a69a;
+  color: white;
 }

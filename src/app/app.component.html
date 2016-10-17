@@ -2,5 +2,50 @@
   {{title}}
 </h1>
 
+<wc-card [style.height]=" '790px' " [style.float]=" 'left' " (tick)="onComponentCustomEvent($event)" (created)="onComponentCustomEvent($event)" (attached)="onComponentCustomEvent($event)">
+  <p>Events from component ({{componentEvent.length}})</p>
+  <pre [style.overflow]=" 'scroll' " [style.height]=" '700px' " >{{ componentEvent | json}}</pre>
+</wc-card>
 
-<wc-card></wc-card>
+<wc-card [title]="cardTitle">
+  <p>
+    with 2-way binding
+  </p>
+  <input type="text" name="name" [(ngModel)]="cardTitle" >
+</wc-card>
+
+<wc-card>
+  <p>
+    Angular2 expression: {{ title }}
+  </p>
+</wc-card>
+
+<wc-card>
+  <p>
+    this is a <i>projected</i> <b>content</b>
+  </p>
+</wc-card>
+
+<wc-card class="theme-center">
+
+  <h1>{{ counter }}</h1>
+  <wc-button (click)="onClicked()">Click me</wc-button>
+
+</wc-card>
+
+<wc-card class="theme-dark">
+  <p>Custom theme</p>
+</wc-card>
+
+<wc-card (tick)="onComponentTick($event)" class="theme-center" [ngClass]="{ 'even': tick % 2 === 0 }" >
+  <h1>{{tick}}</h1>
+</wc-card>
+
+<wc-card>
+  <img [src]="imageUrl" alt="" />
+</wc-card>
+
+
+<wc-card>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41999.460287014335!2d2.312451912519337!3d48.85885362150696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis!5e0!3m2!1sfr!2sfr!4v1476718381547" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+</wc-card>

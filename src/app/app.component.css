@@ -1,0 +1,59 @@
+h1 {
+  color: #26a69a;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+wc-card img {
+  width: 100%;
+}
+
+wc-card input {
+  -webkit-box-ordinal-group: 3;
+  -webkit-order: 2;
+  order: 2;
+  display: block;
+  margin-top: 0;
+  background: none;
+  padding: 2px 2px 1px;
+  border-width: 0 0 1px;
+  line-height: 26px;
+  height: 30px;
+  -ms-flex-preferred-size: 26px;
+  border-radius: 0;
+  border-style: solid;
+  width: 100%;
+  box-sizing: border-box;
+  float: left;
+}
+
+wc-card.theme-center {
+  text-align: center;
+  font-size: 2em;
+  transition: background 0.5s;
+  color: #26a69a;
+  background: white;
+}
+wc-card.theme-center h1 {
+  padding: 0;
+  margin: 35px;
+}
+wc-card.theme-center.even {
+  background: #26a69a;
+  color: white;
+}
+wc-card.theme-center.even h1 {
+  color: white;
+}
+
+@media (max-width: 902px) {
+  wc-card {
+    width: 95%;
+  }
+}

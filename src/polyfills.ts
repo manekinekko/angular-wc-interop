@@ -19,4 +19,6 @@ import 'core-js/es7/reflect';
 import 'zone.js/dist/zone';
 
 import 'webcomponents.js';
+import './app/web-components/wc-element.ts';
 import './app/web-components/wc-card/wc-card.ts';
+import './app/web-components/wc-button/wc-button.ts';

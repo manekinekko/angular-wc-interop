@@ -1,0 +1,36 @@
+<template>
+  <style>
+    :host button{
+      border: none;
+      border-radius: 2px;
+      display: inline-block;
+      height: 36px;
+      line-height: 36px;
+      outline: 0;
+      padding: 0 2rem;
+      text-transform: uppercase;
+      vertical-align: middle;
+      -webkit-tap-highlight-color: transparent;
+      text-decoration: none;
+      color: #fff;
+      background-color: #26a69a;
+      text-align: center;
+      letter-spacing: .5px;
+      transition: .2s ease-out;
+      cursor: pointer;
+      position: relative;
+      cursor: pointer;
+      display: inline-block;
+      overflow: hidden;
+      -webkit-user-select: none;
+      user-select: none;
+      vertical-align: middle;
+      z-index: 1;
+      will-change: opacity, transform;
+      transition: all .3s ease-out;
+    }
+  </style>
+
+  <button type="button" name="button"><content></content></button>
+
+</template>
