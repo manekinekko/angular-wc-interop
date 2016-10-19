@@ -1,9 +1,11 @@
 {
   "name": "angular2-wc-introp",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
+    "deploy": "npm run build && firebase deploy",
+    "build": "ng build --prod",
     "start": "ng serve",
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
