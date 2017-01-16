@@ -26,7 +26,7 @@ export class WcElement extends HTMLElement {
 
   render(templateString) {
     const content = this.getTemplateContent(templateString);
-    const shadowRoot = this.createShadowRoot();
+    const shadowRoot = this.attachShadow({ mode: 'open' });
     shadowRoot.appendChild(content);
   }
 
